@@ -1,0 +1,28 @@
+#security:
+#  oauth2:
+#    client:
+#      client-id: FACEBOOK_APP_ID
+#      client-secret: FACEBOOK_APP_SECRET
+#      access-token-uri: //www.facebook.com/v10.0/dialog/oauth?
+#      token-name: oauth_token
+#      authentication-scheme: query
+#      client-authentication-scheme: form
+#    resource:
+#      user-info-uri: https://graph.facebook.com/me
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: GITHUB_APP_ID
+            client-secret: GITHUB_APP_SECRET
+            access-token-uri: https://github.com/login/oauth/access_token
+            userAuthorizationUri: https://github.com/login/oauth/authorize
+            redirectUri: https://github.com/login/oauth/authorize
+            token-name: oauth_token
+            authentication-scheme: query
+            client-authentication-scheme: form
+          resource:
+            user-info-uri: https://api.github.com/user
